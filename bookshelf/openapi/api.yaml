@@ -1,0 +1,126 @@
+openapi: 3.0.0
+info:
+  title: MyBookshelf
+  version: '1.0'
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /books:
+    get:
+      summary: GET /books
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/PaginatedBookResponse'
+      operationId: endpoints.get_books
+      description: ''
+      parameters:
+        - schema:
+            type: integer
+          in: query
+          name: size
+        - schema:
+            type: integer
+          in: query
+          name: page
+        - schema:
+            type: string
+          in: query
+          name: tag
+    parameters: []
+    post:
+      summary: ''
+      operationId: endpoints.post_books
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        $ref: '#/components/requestBodies/BookRequestBody'
+    put:
+      summary: ''
+      operationId: endpoints.put_books
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        $ref: '#/components/requestBodies/BookRequestBody'
+components:
+  schemas:
+    Book:
+      title: Book
+      type: object
+      properties:
+        uid:
+          type: string
+        name:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        created_at:
+          type: string
+          format: date-time
+        last_modified:
+          type: string
+          format: date-time
+        uri:
+          type: string
+          format: uri
+        icon:
+          type: string
+          format: uri-reference
+        color:
+          type: string
+          pattern: '^[#][0-9a-fA-F]+$'
+          minLength: 4
+          maxLength: 7
+    PaginatedResponse:
+      title: PaginatedResponse
+      type: object
+      properties:
+        page:
+          type: integer
+        size:
+          type: integer
+        total_size:
+          type: number
+        has_next_page:
+          type: boolean
+  requestBodies:
+    BookRequestBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Book'
+  responses:
+    PaginatedBookResponse:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/PaginatedResponse'
+              - type: object
+                properties:
+                  contents:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Book'
+          examples:
+            example-1:
+              value:
+                page: 0
+                size: 0
+                total_size: 0
+                has_next_page: true
+                contents:
+                  - uid: string
+                    name: string
+                    tags:
+                      - string
+                    created_at: '2019-08-24T14:15:22Z'
+                    last_modified: '2019-08-24T14:15:22Z'
+                    uri: 'http://example.com'
+                    icon: ../dictionary
+                    color: string

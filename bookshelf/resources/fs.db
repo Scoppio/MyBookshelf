@@ -1,0 +1,73 @@
+{
+  "content_list": [
+    {
+      "uid": "foobar_the_book",
+      "name": "Foobar: The Book",
+      "uri": "https://foo.bar",
+      "icon": "foobar.png",
+      "color": "#ffffff",
+      "tags": [
+        "foo",
+        "bar"
+      ],
+      "created_at": "2022-03-25T18:05:13.883Z",
+      "last_modified": "2022-03-25T18:05:13.883Z"
+    },
+    {
+      "uid": "foobar_the_book-returns2",
+      "name": "Foobar: The Book returns",
+      "uri": "https://foo.bar",
+      "icon": "foobar.png",
+      "color": "#ffffff",
+      "tags": [
+        "foo",
+        "bar"
+      ],
+      "created_at": "2022-03-25T18:05:13.883Z",
+      "last_modified": "2022-03-25T18:05:13.883Z"
+    },
+    {
+      "uid": "Git-and-you",
+      "name": "Git and you: A primer for dummies",
+      "uri": "string",
+      "icon": "string",
+      "color": "#000000",
+      "tags": [
+        "git"
+      ],
+      "created_at": "2022-03-25T18:13:16.320Z",
+      "last_modified": "2022-03-25T18:13:16.320Z"
+    },
+    {
+      "uid": "huehuehuebr",
+      "name": "HUe hue: BR",
+      "uri": "string",
+      "icon": "string",
+      "color": "#000000",
+      "tags": [
+        "hue"
+      ],
+      "created_at": "2022-03-25T19:10:08.622Z",
+      "last_modified": "2022-03-25T19:10:08.623Z"
+    },
+    {
+      "uid": "shurables",
+      "name": "Shurables uma nova vida",
+      "uri": "string",
+      "icon": "string",
+      "color": "#000000",
+      "tags": [
+        "hue"
+      ],
+      "created_at": "2022-03-25T19:10:08.622Z",
+      "last_modified": "2022-03-25T19:10:08.623Z"
+    }
+  ],
+  "uid_index": {
+    "foobar_the_book": 0,
+    "foobar_the_book-returns2": 1,
+    "Git-and-you": 2,
+    "huehuehuebr": 3,
+    "shurables": 4
+  }
+}

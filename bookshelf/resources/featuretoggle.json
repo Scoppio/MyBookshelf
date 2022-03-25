@@ -1,0 +1,20 @@
+{
+  "NewDatabase": {
+    "value": [false, 1.0],
+    "a": {
+      "value": [false, 1.0]
+    },
+    "b": {
+      "value": [true, 0.5]
+    }
+  },
+  "FilterUsingTag": {
+    "value": [false, 1.0],
+    "a": {
+      "value": [true, 1.0]
+    }
+  },
+  "FixBugInTagFilter": {
+    "value": [true, 1.0]
+  }
+}
